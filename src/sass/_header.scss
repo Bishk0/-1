@@ -1,0 +1,268 @@
+.header{
+  .d-flex{
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.header__row_one{
+  background-color: #303030;
+  .header__contact {
+    width: auto;
+    display: flex;
+    padding: 15px 0;
+    a{
+      color: #cbcacb;
+      font-size: 14px;
+      font-family: 'Roboto', sans-serif;
+      i{
+        color: $main-color;
+        margin-right: 9px;
+      }
+    }
+  }
+  .header__phone{
+    margin-right: 34px;
+  }
+}
+
+.btn__row_one{
+  display: flex;
+  align-items: center;
+  background-color: $main-color;
+  border: none;
+  font-size: 16px;
+  padding: 14px 22px;
+  font-family: 'Roboto', sans-serif;
+  color: #1b1b1b;
+  i{
+    margin-right: 7px;
+    color: #1b1b1b;
+  }
+}
+
+nav{
+  ul{
+    li{
+      display: inline-block;
+      a{
+        font-size: 16px;
+        font-family: 'Roboto', sans-serif;
+        padding: 9px 17px;
+        margin-left: 12px;
+        color: #323232;
+        position: relative;
+        top: 3px;
+        &:hover {
+          outline: 1px solid $main-color;
+        }
+      }
+    }
+  }
+}
+.logo{
+  padding: 30px 0;
+}
+
+.slider{
+  background: url("../img/slider.jpg") no-repeat center / cover;
+  min-height: 500px;
+}
+
+.slider__item-content{
+  text-align: center;
+  padding-top: 110px;
+  max-width: 665px;
+  margin: 0 auto;
+}
+
+.slider__title{
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: 1.5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 22px;
+}
+
+.slider__text{
+  font-size: 18px;
+  font-family: 'PT Serif', serif;
+  color: #d3d2d2;
+  line-height: 24px;
+  margin-bottom: 50px;
+}
+.slider__inner{
+  position: relative;
+}
+.slick-btn{
+  position: absolute;
+  top: 70%;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  background-color: $main-color;
+  i{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+.slick-next{
+  right: 0;
+}
+.slick-prev{
+  left: 0;
+}
+
+.slick-btn.slick-disabled{
+  background: transparent;
+  cursor: default;
+}
+
+#modal2{
+  display: none;
+  input{
+    height: 40px;
+    border: 1px solid #e6e6e6;
+    width: 100%;
+    padding: 0 10px;
+    &[type="text"]{
+      margin-bottom: 15px;
+    }
+    &[type="submit"]{
+      background: $main-color;
+      border: none;
+    }
+  }
+}
+
+.burger-btn {
+  display: none;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  position: relative;
+  z-index: 3;
+}
+
+.burger-btn span,
+.burger-btn span::before,
+.burger-btn span::after {
+  position: absolute;
+  height: 3px;
+  width: 20px;
+  background: $main-color;
+  top: 50%;
+  margin-top: -1.5px;
+  left: 50%;
+  margin-left: -10px;
+}
+
+.burger-btn span::before,
+.burger-btn span::after {
+  content: '';
+  display: block;
+  transition: 0.2s;
+}
+
+.burger-btn span::before {
+  transform: translateY(-6px);
+}
+
+.burger-btn span::after {
+  transform: translateY(6px);
+}
+
+.burger-btn_active span {
+  height: 0;
+}
+
+.burger-btn_active span::before {
+  transform: rotate(45deg);
+}
+
+.burger-btn_active span::after {
+  transform: rotate(-45deg);
+}
+
+
+
+@media (max-width: 875px){
+  .slider{
+    .slick-btn{
+      display: none !important;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .header__row_one{
+    .d-flex{
+      flex-direction: column;
+    }
+    .btn__row_one{
+      display: block;
+     // margin-bottom: 15px;
+    }
+  }
+  .burger-btn{
+    display: block;
+  }
+  .menu{
+    ul{
+      display: none;
+      position: absolute;
+      z-index: 3;
+      left: 0;
+      right: 0;
+      margin-top: 15px;
+      li{
+        display: block;
+        text-align: center;
+        a{
+          display: block;
+          background: $main-color;
+          margin-left: 0;
+          border-top: 0.5px solid #fff;
+          &:hover {
+            outline: none;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 461px){
+  .slider__title{
+    font-size: 24px;
+  }
+  .slider__text{
+    font-size: 16px;
+  }
+}
+@media (max-width: 400px){
+  .header__contact{
+    flex-direction: column;
+    .header__phone{
+      margin-bottom: 10px;
+    }
+  }
+}
+@media (max-width: 385px){
+  .slider__title{
+    font-size: 22px;
+  }
+}
+@media (min-width: 701px){
+  .menu{
+    ul{
+      display: block !important;
+    }
+  }
+}

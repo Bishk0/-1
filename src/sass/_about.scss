@@ -1,0 +1,29 @@
+.about{
+  background: url("../img/about-bg.jpg") no-repeat center /cover;
+  min-height: 300px;
+  padding: 25px 0 45px;
+}
+.about__inner{
+  max-width: 545px;
+}
+.about__title{
+  font-size: 24px;
+  line-height: 24px;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  padding: 10px 0 25px;
+}
+.about__text{
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: #d3d2d2;
+  font-family: 'PT Serif', serif;
+  margin-bottom: 30px;
+}
+.about__btn{
+  i{
+    color: #303030;
+  }
+}

@@ -1,0 +1,109 @@
+// === Variable s===
+$main-color: #ffc222;
+$text-size: 14px;
+// === / Variables ===
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+  font-family: 'PT Serif', serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.btn-default {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.25px;
+  color: #fff;
+  font-weight: 500;
+  padding: 8px 30px 8px 24px;
+  border: 1px solid $main-color;
+  font-family: 'Roboto', sans-serif;
+  border-right-width: 20px;
+  position: relative;
+  background: transparent;
+  i {
+    position: absolute;
+    right: -13px;
+    top: 27%;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+a, button, input, textarea, select {
+  outline: none;
+}
+
+.services__title-box, .form__title-box, .news__title-box {
+  max-width: 520px;
+  padding-left: 140px;
+  position: relative;
+  &:before {
+    position: absolute;
+    content: '';
+    width: 105px;
+    background-color: $main-color;
+    height: 2px;
+    left: 0;
+    top: 12px;
+  }
+}
+
+.services__title, .form__title, .news__title {
+  color: #212020;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 10px;
+}
+
+.services__text, .form__text, .news__text {
+  font-size: 14px;
+  font-family: 'PT Serif', serif;
+  color: #5e5e5e;
+  letter-spacing: 0.1px;
+}
+
+.services__btn, .news__btn {
+  font-size: 14px;
+  line-height: 24px;
+  padding: 5px 37px;
+  font-family: 'Roboto', sans-serif;
+  display: inline-block;
+  color: #373636;
+  border: 3px solid #e6e6e6;
+  letter-spacing: 0.25px;
+}
